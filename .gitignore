@@ -10,7 +10,6 @@
 *.xml
 WebDirectory.core/.idea/
 vendor/
-annuaire.db.conf.ini
 .env
 composer.lock
-.idea
+.idea/
