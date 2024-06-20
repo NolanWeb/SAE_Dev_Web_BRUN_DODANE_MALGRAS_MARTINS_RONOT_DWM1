@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDirectory</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div id="navbar">
+    <input id="search" placeholder="Recherchez..." type="text">
+    <svg width="42" height="51" viewBox="0 0 42 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_15_37)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C6.68629 0 4 2.68629 4 6V12.75H6.83333C7.61574 12.75 8.25 13.3843 8.25 14.1667C8.25 14.9491 7.61574 15.5833 6.83333 15.5833H4V21.25H7.25C7.80229 21.25 8.25 21.6977 8.25 22.25V23.0833C8.25 23.6356 7.80228 24.0833 7.25 24.0833H4V25.8333V28V28.6667V30.8333V33.6667V36.5C4 39.8137 6.68629 42.5 10 42.5H32C35.3137 42.5 38 39.8137 38 36.5V33.6667V30.8333V28.6667V28V25.8333V23V6C38 2.68629 35.3137 0 32 0H10ZM10 34.8333C8.56664 34.8333 7.30938 34.0794 6.60312 32.9465C7.56893 33.611 8.73904 34 10 34H32C33.261 34 34.4311 33.611 35.3969 32.9465C34.6906 34.0794 33.4334 34.8333 32 34.8333H10ZM15.789 15.4167H18.3458L18.8501 13.7462H21.7279L22.2322 15.4167H24.789L21.9083 6.68939H18.6697L15.789 15.4167ZM21.1927 11.9735L20.3231 9.0928H20.2549L19.3853 11.9735H21.1927ZM6.60312 38.6132C7.30939 39.7461 8.56665 40.5 10 40.5H32C33.4334 40.5 34.6906 39.7461 35.3969 38.6132C34.4311 39.2777 33.261 39.6667 32 39.6667H10C8.73904 39.6667 7.56893 39.2777 6.60312 38.6132ZM32 36.8333C33.261 36.8333 34.4311 36.4444 35.3969 35.7798C34.6906 36.9128 33.4334 37.6667 32 37.6667H10C8.56665 37.6667 7.30938 36.9128 6.60312 35.7798C7.56893 36.4444 8.73904 36.8333 10 36.8333H32ZM16.7319 21.25V26.4015H15.3333V21.25H16.7319ZM20.4433 21.25H21.8419V24.5502C21.8419 24.9426 21.748 25.2822 21.5602 25.5689C21.374 25.854 21.1141 26.0745 20.7804 26.2305C20.4467 26.3847 20.0593 26.4619 19.6183 26.4619C19.1739 26.4619 18.7849 26.3847 18.4512 26.2305C18.1174 26.0745 17.8575 25.854 17.6714 25.5689C17.4869 25.2822 17.3947 24.9426 17.3947 24.5502V21.25H18.7932V24.4295C18.7932 24.5888 18.8285 24.7313 18.8989 24.8571C18.9693 24.9812 19.0666 25.0784 19.1907 25.1489C19.3165 25.2193 19.459 25.2545 19.6183 25.2545C19.7793 25.2545 19.9218 25.2193 20.0459 25.1489C20.17 25.0784 20.2673 24.9812 20.3377 24.8571C20.4081 24.7313 20.4433 24.5888 20.4433 24.4295V21.25ZM22.3657 21.25V22.3769H23.9152V26.4015H25.2936V22.3769H26.8431V21.25H22.3657Z" fill="black"/>
+        </g>
+        <defs>
+            <filter id="filter0_d_15_37" x="0" y="0" width="42" height="50.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_15_37"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_15_37" result="shape"/>
+            </filter>
+        </defs>
+    </svg>
+    <div id="filter-div">
+    <select id="department-filter">
+        <option value="All">Tous les départements</option>
+    </select>
+    <div id="alphabetic-button">
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.272705 8.99998H2.82952L3.33381 7.32952H6.2116L6.71589 8.99998H9.27271L6.39202 0.272705H3.15339L0.272705 8.99998ZM5.67644 5.5568L4.8068 2.67611H4.73861L3.86897 5.5568H5.67644ZM1.35795 18.6875V20H8.48295V18.0909H4.375L8.5 12.5852V11.2727H1.375V13.1818H5.48295L1.35795 18.6875ZM15.5303 18.5303L20.3033 13.7574C20.5962 13.4645 20.5962 12.9896 20.3033 12.6967C20.0104 12.4038 19.5355 12.4038 19.2426 12.6967L15.75 16.1893L15.75 2H14.25L14.25 16.1893L10.7574 12.6967C10.4645 12.4038 9.98959 12.4038 9.6967 12.6967C9.4038 12.9896 9.4038 13.4645 9.6967 13.7574L14.4697 18.5303C14.7626 18.8232 15.2374 18.8232 15.5303 18.5303Z" fill="black"/>
+        </svg>
+    </div>
+    </div>
+</div>
+<div id="entry-list"></div>
+<div id="entry-detail"></div>
+
+<script id="entry-list-template" type="text/x-handlebars-template">
+    <ul>
+        {{#each entries}}
+            <li class="entry-link" data-department="{{this.department.id}}" data-id="{{this.id}}">
+                {{this.lastName}} {{this.firstName}} - {{this.department.name}}
+            </li>
+        {{/each}}
+    </ul>
+</script>
+
+<script id="entry-detail-template" type="text/x-handlebars-template">
+    <div id="detail">
+        <div id="back-button">Back</div>
+        <h2>{{firstName}} {{lastName}}</h2>
+        {{#if pp}}
+            <p><img src="{{pp}}" alt="{{firstName}} {{lastName}}"></p>
+        {{/if}}
+        <p><strong>Department:</strong> {{department.name}}</p>
+        <p><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
+        <p><strong>Phone:</strong> {{phone}}</p>
+        <p><strong>Description:</strong></p>
+        <p>{{{description}}}</p>
+    </div>
+</script>
+
+<div id="apk-btn">
+    <svg width="66" height="42" viewBox="0 0 66 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M59 2.7735L49.7156 16.7001C52.1102 17.915 54.3372 19.396 56.3345 21.121C62.5232 26.4657 66 33.7148 66 41.2735H33L0 41.2735C0 33.7148 3.47678 26.4657 9.66548 21.121C11.2474 19.7547 12.9734 18.5416 14.8126 17.4925L5 2.7735L9.16025 0L19.3718 15.3173C23.6128 13.6566 28.2537 12.7735 33 12.7735C37.1528 12.7735 41.2249 13.4495 45.0191 14.731L54.8397 0L59 2.7735ZM24 29.5C24 30.8807 22.8807 32 21.5 32C20.1193 32 19 30.8807 19 29.5C19 28.1193 20.1193 27 21.5 27C22.8807 27 24 28.1193 24 29.5ZM44.5 32C45.8807 32 47 30.8807 47 29.5C47 28.1193 45.8807 27 44.5 27C43.1193 27 42 28.1193 42 29.5C42 30.8807 43.1193 32 44.5 32Z" fill="black"/>
+    </svg>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

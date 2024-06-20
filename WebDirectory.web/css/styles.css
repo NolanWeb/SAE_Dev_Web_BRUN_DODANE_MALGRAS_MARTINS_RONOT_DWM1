@@ -1,0 +1,207 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #dedede;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ececec;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 20px;
+}
+#navbar svg {
+    cursor: pointer;
+}
+#search {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-right: 10px;
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#entry-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+li {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background: #ececec;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+li:hover {
+    background: black;
+    color: white;
+    transition: all 0.2s;
+}
+#entry-detail {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ececec;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 400px;
+    max-width: 80vw;
+    height: 90vh;
+    min-height: 90vh;
+}
+#entry-detail p {
+    text-align: center;
+}
+#back-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ececec;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#back-button:hover {
+    background: black;
+    color: white;
+    transition: all 0.2s;
+}
+#department-filter {
+    appearance: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#department-filter option {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-right: 10px;
+}
+#alphabetic-button {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#alphabetic-button:hover {
+    background: gray;
+    color: white;
+    transition: all 0.2s;
+}
+#filter-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+#entry-detail h2 {
+    margin: 0;
+}
+#apk-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#apk-btn:hover {
+    background: gray;
+    color: white;
+    transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+    #entry-list {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    #search {
+        width: 150px;
+    }
+
+    #department-filter {
+        width: 150px;
+    }
+
+    #navbar svg {
+        display: none;
+    }
+
+    #alphabetic-button svg {
+        display: flex;
+    }
+}
