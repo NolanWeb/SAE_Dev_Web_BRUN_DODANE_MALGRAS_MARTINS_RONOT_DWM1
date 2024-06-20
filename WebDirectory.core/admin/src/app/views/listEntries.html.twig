@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Liste des personnes
+{% endblock %}
+
+{% block body %}
+    <h1>Liste des personnes</h1>
+
+    <form action="{{ url_for('listEntries') }}" method="get">
+        <label for="department">Filtrer par Département:</label>
+        <select id="department" name="department" onchange="this.form.submit()">
+            <option value="">Tous les départements</option>
+            {% for department in departments %}
+                <option value="{{ department.id }}" {% if department.id == selectedDepartment %}selected{% endif %}>{{ department.name }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <div class="list-entries">
+    {% for entry in entries %}
+        <div class="entry">
+            <img src="http://docketu.iutnc.univ-lorraine.fr:30001/api/files/{{ entry.pp }}" alt="Avatar de {{ entry.firstName }} {{ entry.lastName }}" />
+            {{ entry.firstName }} - {{ entry.lastName }} - {{ entry.email }}
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

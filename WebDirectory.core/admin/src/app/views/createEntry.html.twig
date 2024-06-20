@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Créer une Entrée
+{% endblock %}
+
+{% block body %}
+    <h1>Créer une entrée</h1>
+    <form action="{{ url_for('createEntryPOST') }}" method="post" enctype="multipart/form-data">
+            <label for="firstName">Prénom:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Nom:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="mail" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="address">Adresse:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="department">Département:</label>
+            <select id="department" name="department">
+                {% for department in departments %}
+                    <option value="{{ department.id }}">{{ department.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required></input>
+
+            <label for="pp">Photo de Profil:</label>
+            <input type="file" id="pp" name="pp" required>
+
+            <input type="submit" value="Create">
+    </form>
+{% endblock %}

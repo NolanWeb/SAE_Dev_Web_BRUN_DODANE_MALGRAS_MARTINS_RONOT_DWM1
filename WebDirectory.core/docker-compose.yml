@@ -1,0 +1,63 @@
+version: "3.9"
+
+networks:
+  annuaire.net:
+    driver: bridge
+
+services:
+  app:
+    image: canals/php:latest
+    ports:
+      - "30000:80"
+    volumes :
+      - "./admin/public:/var/www/html"
+      - "./admin/src:/var/www/src"
+      - "./files:/var/www/src/files"
+    working_dir: "/var/www/html"
+    networks:
+      - annuaire.net
+    depends_on:
+      - sql
+    restart: unless-stopped
+
+
+  api:
+    image: canals/php:latest
+    ports:
+      - "30001:80"
+    volumes:
+      - "./api/public:/var/www/html"
+      - "./api/src:/var/www/src"
+      - "./files:/var/www/src/files"
+    working_dir: "/var/www/html"
+    networks:
+      - annuaire.net
+    depends_on:
+      - sql
+    restart: unless-stopped
+
+
+  sql:
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD${MYSQL_PASSWORD}
+    ports:
+      - "30005:3306"
+    networks:
+      annuaire.net:
+        aliases:
+          - sql.db
+          - sql326.net
+    restart: unless-stopped
+
+
+  adminer:
+    image: adminer
+    ports:
+      - "30010:8080"
+    command: php -S 0.0.0.0:8080 -t /var/www/html
+    networks:
+      - annuaire.net
+    restart: unless-stopped
