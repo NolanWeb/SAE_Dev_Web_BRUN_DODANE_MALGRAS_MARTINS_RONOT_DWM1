@@ -7,7 +7,6 @@
 - RONOT Martin
 
 ## WebDirectory.core
-URL à tester pour l'application :
 http://docketu.iutnc.univ-lorraine.fr:30000/listEntries
 
 ## WebDirectory.web
