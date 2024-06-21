@@ -11,5 +11,7 @@ URL à tester pour l'application :
 http://docketu.iutnc.univ-lorraine.fr:30000/listEntries
 
 ## WebDirectory.web
+http://docketu.iutnc.univ-lorraine.fr:30001/api/entry/all
 
 ## WebDirectory.app
+http://docketu.iutnc.univ-lorraine.fr:8080
